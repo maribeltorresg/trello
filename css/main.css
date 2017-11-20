@@ -4,27 +4,67 @@
   padding: 0;
 }
 
+body {
+  font-family: Arial;
+  font-size: 14px;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
 header {
-  background-color: blue;
-  height: 60px;
-}
-
-ul {
-  padding-top: 12px;  
-}
-
-ul li {
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 3px;
-  padding: 8px;
-  margin: 0 5px;
+  background-color: #026aa7;
+  overflow: auto;
+  padding: 5px 8px; 
 }
 
 .logo {
-  margin: 0 30%;
+  display: block;
+  left: 50%;
+  margin-left: -40px;
+  opacity: 0.5;
+  position: absolute;
+  width: 80px;
 }
 
-i {
+.logo:hover {
+  opacity: .7;
+}
+
+.main-buttons {
+  float: left;
+}
+
+.button {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
   color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  min-width: 30px;
+  padding: 0 8px;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.button input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.button .fa {
+  font-size: 16px;
+}
+
+.user-buttons {
+  float: right;
 }
