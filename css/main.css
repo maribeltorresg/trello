@@ -5,6 +5,7 @@
 }
 
 body {
+  color: #444;
   font-family: Arial;
   font-size: 14px;
 }
@@ -15,9 +16,12 @@ img {
 }
 
 header {
-  background-color: #026aa7;
+  background-color: rgba(0, 0, 0, .12);
   overflow: auto;
   padding: 5px 8px; 
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 .logo {
@@ -43,9 +47,9 @@ header {
   color: #fff;
   cursor: pointer;
   display: inline-block;
+  font-weight: bold;
   height: 30px;
   line-height: 30px;
-  font-weight: bold;
   min-width: 30px;
   padding: 0 8px;
   text-align: center;
@@ -53,6 +57,14 @@ header {
 
 .button:hover {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.button-done {
+  background-color: #5aac44;
+}
+
+.button-done:hover {
+  background-color: #5aac44;
 }
 
 .button input {
@@ -68,3 +80,117 @@ header {
 .user-buttons {
   float: right;
 }
+
+.board {
+  background-color: #026aa7;
+  bottom: 0;
+  left: 0;
+  padding-top: 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.board-header {
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 8px;
+}
+
+.board-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.board-content {
+  bottom: 0;
+  left: 0;
+  /* overflow-x: scroll; */
+  overflow-y: hidden;
+  padding: 0 4px 20px;
+  position: absolute;
+  right: 0;
+  top: 80px;
+  /* no deja que el contenido se vaya hacia abajo */
+  white-space: nowrap;
+}
+
+.lists {
+  display: inline-block;
+  height: 100%;
+}
+
+.list {
+  background-color: #eee;
+  border-radius: 3px;
+  display: inline-block;
+  max-height: 100%;
+  margin: 0 4px;
+  overflow-x: hidden;
+  /* overflow-y: scroll; */
+  padding: 8px;
+  vertical-align: top;
+  width: 270px;
+}
+
+.list-title {
+  font-weight: bold;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.card {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 0 0 6px;
+  min-height: 40px;
+}
+
+.list-add .list-add-placeholder {
+  color: #fff;
+  display: none;
+}
+
+.list-add .list-add-input {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 8px rgba(0, 0, 0, .15);
+  display: block;
+  font-size: 14px;
+  margin: 0 0 8px;
+  outline: none;
+  padding: 8px 4px;
+  width: 100%;
+}
+
+.list-add.inactive {
+  background-color: rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.list-add.inactive .list-add-placeholder {
+  display: block;
+}
+
+.list-add.inactive .list-add-input {
+  display: none;
+}
+
+.list-add.inactive .button {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+

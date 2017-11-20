@@ -36,6 +36,34 @@
       </div>
     </div>
   </header>
+  <!-- tablero -->
+  <main class="board">
+    <div class="board-header">
+      <div class="board-title">Tablero-Reto de código</div>
+    </div>
+    <div class="board-content">
+      <div id="lists" class="lists">
+        <div class="list">
+          <div class="list-title">Primera lista</div>
+          <div class="cards">
+            <!-- todas las tarjetas -->
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
+          <div class="card-add"></div>
+        </div>
+      </div>
+      <div id="list-add" class="list-add list inactive">
+        <span id="list-add-placeholder" class="list-add-placeholder">Añadir una lista...</span>
+        <input type="text" id="list-add-input" class="list-add-input" placeholder="Añadir una lista...">
+        <div id="list-add-save" class="button button-done">Guardar</div>
+        <div id="list-add-cancel" class="button">
+          <span class="fa fa-close"></span>
+        </div>
+      </div>
+    </div>
+  </main>
   <script src="js/app.js"></script>
 </body>
 </html>
