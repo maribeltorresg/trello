@@ -149,6 +149,56 @@ header {
   min-height: 40px;
 }
 
+.card-add .card-add-placeholder {
+  display: none;
+}
+
+.card-add .card-add-textarea {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 3px;
+  display: block;
+  font-size: 14px;
+  margin: 0 0 8px;
+  outline: none;
+  padding: 8px 4px;
+  resize: none;
+  width: 100%;
+}
+
+.card-add.inactive {
+  cursor: pointer;
+}
+
+.card-add.inactive .card-add-placeholder {
+  display: block;
+}
+
+.card-add.inactive .card-add-textarea {
+  display: none;
+}
+
+.card-add.inactive .button {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .list-add .list-add-placeholder {
   color: #fff;
   display: none;
