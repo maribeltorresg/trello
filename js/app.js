@@ -17,10 +17,9 @@ window.addEventListener('load', function() {
 
   function drawLists() {
     lists.textContent = '';
-    for (var i = 0; i < data.length; i++) {
+    data.forEach(function(listData) {
       var list = createElement('div', 'list');
-      var listTitle = createElement('div', 'list-title', data[i].title);
-
+      var listTitle = createElement('div', 'list-title', listData.title);
       var cards = createElement('div', 'cards');
       // version 3
       var cardAdd = createElement('div', 'card-add inactive');
@@ -47,7 +46,7 @@ window.addEventListener('load', function() {
       list.appendChild(cards);
       list.appendChild(cardAdd);
       lists.appendChild(list);
-    }
+    });
   }
 
   function createElement(tagName, className, textContent, innerHtml) {
