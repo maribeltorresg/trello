@@ -147,6 +147,7 @@ header {
   cursor: pointer;
   margin: 0 0 6px;
   min-height: 40px;
+  padding: 4px;
 }
 
 .card-add .card-add-placeholder {

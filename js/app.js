@@ -1,5 +1,14 @@
 window.addEventListener('load', function() {
-  var data = [];
+  var data = [
+    // {
+    //   title: 'Primera Lista',
+    //   cards: [
+    //     {
+    //       description: '',
+    //     },
+    //   ],
+    // },
+  ];
 
   var lists = document.getElementById('lists');
   var listAdd = document.getElementById('list-add');
@@ -26,12 +35,22 @@ window.addEventListener('load', function() {
       var cardAddPlaceholder = createElement('span', 'card-add-placeholder', 'Add a card...');
       var cardAddTextarea = createElement('textarea', 'card-add-textarea');
       var cardAddSave = createElement('div', 'button button-done', 'Save');
-      var cardAddCancel = createElement('div', 'button', null, 'span class="fa fa-close"></span>');
+      var cardAddCancel = createElement('div', 'button', null, '<span class="fa fa-close"></span>');
 
       cardAddPlaceholder.addEventListener('click', function() {
         cardAdd.classList.remove('inactive');
+        cardAddTextarea.focus();
       });
-      
+      // version 4
+      cardAddSave.addEventListener('click', function() {
+        listData.cards.push({description: cardAddTextarea.value});
+        cards.textContent = '';
+        listData.cards.forEach(function(card) {
+          cards.appendChild(createElement('div', 'card', card.description));
+        });
+        cardAdd.classList.add('inactive');
+      });
+
       cardAddCancel.addEventListener('click', function() {
         cardAdd.classList.add('inactive');
       });
@@ -49,7 +68,7 @@ window.addEventListener('load', function() {
     });
   }
 
-  function createElement(tagName, className, textContent, innerHtml) {
+  function createElement(tagName, className, textContent, innerHTML) {
     var element = document.createElement(tagName);
     if (className) {
       element.className = className;
@@ -57,8 +76,8 @@ window.addEventListener('load', function() {
     if (textContent) {
       element.textContent = textContent;
     }
-    if (innerHtml) {
-      element.innerHtml = innerHtml;
+    if (innerHTML) {
+      element.innerHTML = innerHTML;
     }
 
     return element;
@@ -73,4 +92,4 @@ window.addEventListener('load', function() {
     listAdd.classList.add('inactive');
   });
 
-})
+});
